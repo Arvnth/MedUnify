@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\MedUnify_UI.props" />
+</Project>

@@ -1,0 +1,53 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = browser
+build_property.RootNamespace = MedUnify_UI
+build_property.RootNamespace = MedUnify_UI
+build_property.ProjectDir = C:\Users\Aravinth\source\repos\MedUnify\MedUnify_UI\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\Aravinth\source\repos\MedUnify\MedUnify_UI
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/Aravinth/source/repos/MedUnify/MedUnify_UI/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Aravinth/source/repos/MedUnify/MedUnify_UI/Pages/AddPatient.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRkUGF0aWVudC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Aravinth/source/repos/MedUnify/MedUnify_UI/Pages/AddProgressNotes.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRkUHJvZ3Jlc3NOb3Rlcy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Aravinth/source/repos/MedUnify/MedUnify_UI/Pages/AddVisit.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRkVmlzaXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Aravinth/source/repos/MedUnify/MedUnify_UI/Pages/PatientsList.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGF0aWVudHNMaXN0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Aravinth/source/repos/MedUnify/MedUnify_UI/Shared/SurveyPrompt.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Aravinth/source/repos/MedUnify/MedUnify_UI/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Aravinth/source/repos/MedUnify/MedUnify_UI/Shared/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-639ochxder
+
+[C:/Users/Aravinth/source/repos/MedUnify/MedUnify_UI/Shared/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-40bomy8eaz

@@ -1,0 +1,44 @@
+﻿
+@page "/patients"
+@using MedUnify.Models
+@using MedUnify.Services
+
+<h3>Patients List</h3>
+
+@if (Patients != null && Patients.Any())
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Patient ID</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Gender</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var patient in Patients)
+            {
+                <tr>
+                    <td>@patient.PatientId</td>
+                    <td>@patient.Name</td>
+                    <td>@patient.Age</td>
+                    <td>@patient.Gender</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>No patients found.</p>
+}
+
+@code {
+    private List<Patient> Patients { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        Patients = await PatientService.GetPatientsAsync();
+    }
+}

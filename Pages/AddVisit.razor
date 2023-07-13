@@ -1,0 +1,39 @@
+﻿<!-- AddVisit.razor -->
+@page "/patients/{PatientId:int}/visits/add"
+@using MedUnify.Models
+
+<h3>Add Visit</h3>
+
+<Form>
+    <ValidationSummary />
+
+    <FormGroup>
+        <Label for="visitDate">Visit Date</Label>
+        <InputDate id="visitDate" @bind-Value="visit.VisitDate" />
+        <ValidationMessage For="@(() => visit.VisitDate)" />
+    </FormGroup>
+
+    <FormGroup>
+        <Label for="description">Description</Label>
+        <InputText id="description" @bind-Value="visit.Description" />
+        <ValidationMessage For="@(() => visit.Description)" />
+    </FormGroup>
+
+    <Button type="submit" color="Color.Primary" @onclick="AddVisit">Add</Button>
+</Form>
+
+@code {
+    [Parameter]
+    public int PatientId { get; set; }
+
+    private Visit visit = new Visit();
+
+    private async Task AddVisit()
+    {
+        visit.PatientId = PatientId;
+        if (await PatientService.AddVisitAsync(visit))
+        {
+            NavigationManager.NavigateTo($"/patients/{PatientId}");
+        }
+    }
+}

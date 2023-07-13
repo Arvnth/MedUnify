@@ -1,0 +1,37 @@
+﻿<!-- AddProgressNotes.razor -->
+@page "/patients/{PatientId:int}/visits/{VisitId:int}/progressnotes/add"
+@using MedUnify.Models
+
+<h3>Add Progress Notes</h3>
+
+<Form>
+    <ValidationSummary />
+
+    <FormGroup>
+        <Label for="notes">Notes</Label>
+        <InputTextArea id="notes" @bind-Value="progressNotes.Notes" />
+        <ValidationMessage For="@(() => progressNotes.Notes)" />
+    </FormGroup>
+
+    <Button type="submit" color="Color.Primary" @onclick="AddProgressNotes">Add</Button>
+</Form>
+
+@code {
+    [Parameter]
+    public int PatientId { get; set; }
+
+    [Parameter]
+    public int VisitId { get; set; }
+
+    private ProgressNotes progressNotes = new ProgressNotes();
+
+    private async Task AddProgressNotes()
+    {
+        progressNotes.PatientId = PatientId;
+        progressNotes.VisitId = VisitId;
+        if (await PatientService.AddProgressNotesAsync(progressNotes))
+        {
+            NavigationManager.NavigateTo($"/patients/{PatientId}");
+        }
+    }
+}

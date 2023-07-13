@@ -1,0 +1,44 @@
+﻿
+@page "/patients/add"
+@using MedUnify.Models
+
+<h3>Add Patient</h3>
+
+<Form>
+    <ValidationSummary />
+
+    <FormGroup>
+        <Label for="name">Name</Label>
+        <InputText id="name" @bind-Value="patient.Name" />
+        <ValidationMessage For="@(() => patient.Name)" />
+    </FormGroup>
+
+    <FormGroup>
+        <Label for="age">Age</Label>
+        <InputNumber id="age" @bind-Value="patient.Age" />
+        <ValidationMessage For="@(() => patient.Age)" />
+    </FormGroup>
+
+    <FormGroup>
+        <Label for="gender">Gender</Label>
+        <Select id="gender" @bind-Value="patient.Gender">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </Select>
+        <ValidationMessage For="@(() => patient.Gender)" />
+    </FormGroup>
+
+    <Button type="submit" color="Color.Primary" @onclick="AddPatient">Add</Button>
+</Form>
+
+@code {
+    private Patient patient = new Patient();
+
+    private async Task AddPatient()
+    {
+        if (await PatientService.AddPatientAsync(patient))
+        {
+            NavigationManager.NavigateTo("/patients");
+        }
+    }
+}
